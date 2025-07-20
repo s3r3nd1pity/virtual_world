@@ -46,7 +46,7 @@ class UserRetrieveUpdateDestroyView(APIView):
         try:
             user = UserModel.objects.get(pk=pk)
         except UserModel.DoesNotExist:
-            return Response("There is no user with such id", status=status.HTTP_404_NOT_FOUND)
+            return Response("There is no user with such idd", status=status.HTTP_404_NOT_FOUND)
         data = self.request.data
         # for k, v in data.items():
         #     setattr(user, k, v)
