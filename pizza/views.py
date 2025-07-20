@@ -24,7 +24,7 @@ class PizzaRetrieveUpdateDestroyView(APIView):
         try:
             pizza = PizzaModel.objects.get(pk=pk)
         except PizzaModel.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response("This is not working",status=status.HTTP_404_NOT_FOUND)
         serializer = PizzaSerializer(pizza)
         return Response(serializer.data, status=status.HTTP_200_OK)
     def put(self, *args, **kwargs):
