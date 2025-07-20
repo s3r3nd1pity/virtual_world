@@ -15,11 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from first.views import FirstView, SecondView
-from users.views import UserListCreateView, UserRetrieveUpdateDestroyView
+
 urlpatterns = [
-    path("first", FirstView.as_view() ),
-    path("second/<int:age>/<str:name>/<slug:asd>", SecondView.as_view() ),#slug is with no spaces
-    path("users", UserListCreateView.as_view() ),
-    path("users/<int:pk>", UserRetrieveUpdateDestroyView.as_view() ),
+
 ]
